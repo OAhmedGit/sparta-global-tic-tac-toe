@@ -1,8 +1,12 @@
-body { font-family: 'Helvetica' }
+body { 
+  font-family: 'Helvetica'; 
+}
+
 table {
   margin: 0 auto;
   border-radius:10px;
 }
+
 td {
   border: 1px solid black;
   width: 200px;
@@ -15,8 +19,9 @@ td {
   background: black;
   color: white;
 }
+
 .O {
-  background: white;
+  background: green;
   color: black;
 }
 
