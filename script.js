@@ -9,11 +9,11 @@ function clickedBox(){
         if(this.classList != "X" && this.classList != "O"){
             if(playerTurn == 0){
                 $(".playerTurn").html("It is O's turn");
-                this.classList.add("X");
+                $(this).html("X").addClass("X");
                 playerTurn = 1;
             } else{
                 $(".playerTurn").html("It is X's turn");
-                this.classList.add("O");
+                $(this).html("O").addClass("O");
                 playerTurn = 0;
             }
         }
@@ -23,7 +23,13 @@ function clickedBox(){
 //Function to reset the game by clearing the classes.
 function reset(){
     $("td").each(function(){
-        this.className = "";
+        if($(this).hasClass("X")){
+            $(this).removeClass("X");
+        } else if($(this).hasClass("O")){
+            $(this).removeClass("O");
+        }
+
+        $(this).html("");
     });
 
     playerTurn = 0;
